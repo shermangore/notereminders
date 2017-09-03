@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Note Reminders</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Dancing+Script" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <div class="my-nav-header text-center">Saved Notes</div>
+        <div class="nav nav-sidebar list-group" id="results">
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">&nbsp;</div>
+      <div class="col-sm-5 col-sm-offset-3 col-md-6 col-md-offset-2 main">
+        <h1 class="page-header">WorkValve Reminder System</h1>
+        <div class="row placeholders">
+          <div id="form-group userinput">
+            <label for="title">Subject</label>
+            <input type="text" id="title" name="title" class="form-control" title="Enter note subject" />
+            <label for="note">Note</label>
+            <textarea id="note" name="note" class="form-control" rows="5" title="Enter the note"></textarea>
+            <label for="reminderdate">Reminder Date</label>
+            <input type="date" id="reminder" name="reminder" class="form-control" title="Enter date to be reminded" />
+            <br>
+            <div id="buttons">
+              <div id="actionbutton">
+                <button type="button" id="makenew" class="btn btn-success">Submit</button>
+                <button id="cancel" class="btn btn-warning">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">&nbsp;</div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+</html>
