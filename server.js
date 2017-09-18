@@ -10,7 +10,7 @@ var logger = require("morgan");
 var app = express();
 var schedule = require("node-schedule");
 const nodemailer = require("nodemailer");
-const Config = require("config.js");
+const Config = require("./config.js");
 
 // Set the app up with morgan, body-parser, and a static folder
 app.use(logger("dev"));
