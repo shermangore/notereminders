@@ -10,7 +10,7 @@ var logger = require("morgan");
 var app = express();
 var schedule = require("node-schedule");
 const nodemailer = require("nodemailer");
-const Config = require("./config.js");
+//const Config = require("./config.js");
 
 // Set the app up with morgan, body-parser, and a static folder
 app.use(logger("dev"));
@@ -33,12 +33,16 @@ db.on("error", function(error) {
 });
 
 let transporter = nodemailer.createTransport({
-  host: Config.host,
-  port: Config.port,
+  //host: Config.host,
+  host: process.env.emailHost,
+  //port: Config.port,
+  port: process.env.emailPort,
   secure: false,
   auth: {
-    user: Config.user,
-    pass: Config.pw
+    // user: Config.user,
+    // pass: Config.pw
+    user: process.env.user,
+    pass: process.env.pw
   }, 
   tls: {
     rejectUnauthorized: false
