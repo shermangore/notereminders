@@ -20,7 +20,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration
-var databaseUrl = "week18day2";
+//var databaseUrl = "week18day2";
+var databaseUrl = "mongodb://heroku_1tsz6s22:f7gkrspjupiuthu6ki03dd7i6d@ds139124.mlab.com:39124/heroku_1tsz6s22";
 var collections = ["notes"];
 
 // Hook mongojs config to db variable
@@ -178,6 +179,6 @@ app.get("/delete/:id", function(req, res) {
 // });
 
 // Listen on port 3000
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("App running on port 3000!");
 });
